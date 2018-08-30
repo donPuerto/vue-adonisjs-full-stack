@@ -10,7 +10,7 @@ class UserController {
   async login ({ request, auth}) {
     const { email, password } = request.all()
     const token = await auth.attempt(email, password)
-    console.log('token', token)
+    // console.log('token', token)
     return token
   }
 
@@ -24,6 +24,11 @@ class UserController {
       username: email
     })
     // console.log(this.login(...arguments))
+
+    /**
+     * After registration, to return with automatic to login
+     * givem the credential at the login
+     */
     return this.login(...arguments)
   }
 }
