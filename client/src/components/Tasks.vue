@@ -40,7 +40,7 @@ export default {
   components: {
     CreateRecord,
     EditableRecord,
-  },
+   },
   computed: {
     ...mapState('tasks', [
       'tasks',

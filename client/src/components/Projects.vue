@@ -1,7 +1,7 @@
 <template>
   <Panel title="Projects">
     <div
-      class="project mt-2"
+      class="project mt-4"
       v-for="project in projects"
       :key="project.id"
     >
@@ -18,6 +18,7 @@
         @onDelete="deleteProject(project)"
       />
     </div>
+
     <CreateRecord
       placeholder="My project name...."
       @onInput="setNewProjectName"
@@ -71,7 +72,7 @@ export default {
 
 <style>
 .project {
-  font-size: 24px;
+  font-size: 14px;
 }
 .icon {
   cursor: pointer;

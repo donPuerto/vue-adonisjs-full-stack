@@ -1,14 +1,17 @@
 <template>
   <v-layout row wrap class="mt-4">
-    <v-flex xs8>
+    <v-flex xs12>
+
       <v-text-field
         :placeholder="placeholder"
         :value="value"
         @input="$emit('onInput', $event)"
         @keyup.enter="$emit('create')"
       ></v-text-field>
+
     </v-flex>
-    <v-flex xs4 class="text-xs-right">
+
+    <v-flex xs12 class="text-xs-right">
       <v-btn
         @click="$emit('create')"
         dark
@@ -18,6 +21,7 @@
         Create
       </v-btn>
     </v-flex>
+    
   </v-layout>
 </template>
 
